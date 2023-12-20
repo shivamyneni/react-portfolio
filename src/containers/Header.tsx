@@ -10,7 +10,7 @@ const Header = () => {
   const navbarHeaderRef = React.useRef<any>(null);
 
   const [showNavbar, setShowNavbar] = React.useState<boolean>(false);
-  const [headerText, setHeaderText] = React.useState<string>("shivamyneni");
+  const [headerText, setHeaderText] = React.useState<string>("hivamyneni");
   React.useEffect(() => {
     if (showNavbar) {
       gsap
@@ -47,16 +47,12 @@ const Header = () => {
         className="w-auto h-auto flex flex-row  justify-between"
         ref={headerRef}
       >
-        <div className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit flex flex-col items-start justify-start ">
+        <div className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit flex flex-row items-end justify-start ">
           <p
-            className=" font-bold xs:text-[20px] sm:text-[15px] transition text-[#5352ED] md:text-[20px] font-Sora uppercase"
+            className=" font-bold xs:text-[20px] sm:text-[15px] transition text-[#5352ED] md:text-[30px] font-telugu uppercase"
             ref={navbarHeaderRef}
-            onMouseEnter={() => setHeaderText("my portfolio")}
-            onMouseLeave={() => {
-              setHeaderText("shivamyneni");
-            }}
           >
-            {headerText}.
+            శివ.
           </p>
         </div>
         <Navbar />

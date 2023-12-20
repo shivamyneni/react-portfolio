@@ -17,6 +17,7 @@ module.exports = {
         Alegreya: ["Alegreya"],
         pixel: ["Press Start 2P"],
         barlow: ["Barlow Condensed"],
+        telugu: ["Noto Sans Telugu"],
       },
       backgroundImage: {
         background: `url('${path.resolve(
