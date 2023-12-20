@@ -29,15 +29,16 @@ const Intro = () => {
         className="xs:max-w-[100vw] sm:max-w-[100vw] mt-[200px]  flex flex-col md:max-w-[50vw]  xs:max-h-[50vh] sm:max-h-[50vh] md:max-h-[100vh]  bg-cover items-start"
         ref={introRef}
       >
-        <p className="font-Alegreya xs:text-[30px] md:text-[50px] uppercase text-[#5352ED] px-[30px] font-bold ">
-          I'm shiva
+        <p
+          className="font-barlow xs:text-[30px] md:text-[60px] uppercase text-[#5352ED] px-[30px] font-extrabold
+      "
+        >
+          shiva myneni
         </p>
         <p
           ref={titleRef}
-          className="  font-Sora xs:text-[30px] md:text-[50px] uppercase px-[30px] text-[#e63351] font-medium"
-        >
-          myneni
-        </p>
+          className="  font-barlow xs:text-[30px] md:text-[50px] uppercase px-[30px] text-[#e63351] font-extrabold"
+        ></p>
         <p className="font-Sora text-[#5352ED] text-[16px] font-bold  px-[30px] capitalize">
           full stack & React native developer
         </p>

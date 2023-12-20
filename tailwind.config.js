@@ -16,6 +16,7 @@ module.exports = {
         Sora: ["Sora"],
         Alegreya: ["Alegreya"],
         pixel: ["Press Start 2P"],
+        barlow: ["Barlow Condensed"],
       },
       backgroundImage: {
         background: `url('${path.resolve(

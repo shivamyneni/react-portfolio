@@ -39,7 +39,7 @@ const Header = () => {
 
   return (
     <div
-      className={`w-screen h-auto flex flex-col xs:px-[15px] sm:px-[15px] md:px-[40px] xs:py-[15px] sm:py-[15px] md:py-[40px] fixed  z-50 backdrop-filter backdrop-blur-md bg-white 
+      className={`w-screen h-auto flex flex-col xs:px-[15px] sm:px-[15px] md:px-[30px] xs:py-[15px] sm:py-[15px] md:py-[20px] fixed  z-50 backdrop-filter backdrop-blur-md bg-white 
         
       }`}
     >
@@ -47,7 +47,7 @@ const Header = () => {
         className="w-auto h-auto flex flex-row  justify-between"
         ref={headerRef}
       >
-        <div className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit  ">
+        <div className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit flex flex-col items-start justify-start ">
           <p
             className=" font-bold xs:text-[20px] sm:text-[15px] transition text-[#5352ED] md:text-[20px] font-Sora uppercase"
             ref={navbarHeaderRef}
