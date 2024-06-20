@@ -1,83 +1,94 @@
-import Header from "@containers/Header.tsx";
-
-import github from "react-useanimations/lib/github";
-import React from "react";
-import instagram from "@images/instagram.png";
-import linkedin from "@images/linkedin.png";
-import twitter from "@images/twitter.png";
-import githublogo from "@images/github.png";
-import developer from "@images/developer.png";
+import React, { memo } from "react";
+import "../index.css";
 import gsap from "gsap";
 
-import UseAnimations from "react-useanimations";
+import Logo from "assets/Images/Logo";
 
-const Intro = () => {
-  const introRef = React.useRef(null);
-  const titleRef = React.useRef(null);
-  React.useEffect(() => {
-    gsap
-      .timeline()
-      .fromTo(
-        introRef.current,
-        { xPercent: -100 },
-        { xPercent: 0, duration: 1 }
-      );
-  }, []);
-  return (
-    <div className="max-w-[100vw] max-h-screen  bg-white flex xs:flex-col sm:flex-col md:flex-row xs:justify-center md:items-center">
-      <div
-        className="xs:max-w-[100vw] sm:max-w-[100vw] mt-[200px]  flex flex-col md:max-w-[50vw]  xs:max-h-[50vh] sm:max-h-[50vh] md:max-h-[100vh]  bg-cover items-start"
-        ref={introRef}
-      >
-        <p
-          className="font-barlow xs:text-[30px] md:text-[60px] uppercase text-[#5352ED] px-[30px] font-extrabold
-      "
-        >
-          shiva myneni
-        </p>
-        <p
-          ref={titleRef}
-          className="  font-barlow xs:text-[30px] md:text-[50px] uppercase px-[30px] text-[#e63351] font-extrabold"
-        ></p>
-        <p className="font-Sora text-[#5352ED] text-[16px] font-bold  px-[30px] capitalize">
-          full stack & React native developer
-        </p>
-        <p className="font-Sora text-[13px] text-[#5352ED] font-normal  px-[30px] capitalize text-start">
-          I have handson experience in mobile app development and web
-          development with react native and reactjs.
-        </p>
-        <div className="flex flex-row items-center px-[30px] mt-[20px]">
-          <a href="https://www.instagram.com/_shivamyneni/">
-            <img
-              src={instagram}
-              className=" xs:h-[50px] sm:h-[50px] mr-[12px] md:h-[30px] transition xs:w-[50px] sm:w-[50px] md:w-[30px] hover:scale-125"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/shivamyneni/">
-            <img
-              src={linkedin}
-              className=" xs:h-[50px] sm:h-[50px] mr-[12px] md:h-[30px] transition xs:w-[53px] sm:w-[53px] md:w-[33px]  hover:scale-125"
-            />
-          </a>
-          <a href="https://twitter.com/Shivamyneni1">
-            <img
-              src={twitter}
-              className=" xs:h-[50px] sm:h-[50px] md:h-[30px] mr-[12px] transition xs:w-[50px] sm:w-[50px] md:w-[30px]  hover:scale-125"
-            />
-          </a>
-          <a href="https://github.com/shivamyneni">
-            <img
-              src={githublogo}
-              className=" xs:h-[50px] sm:h-[50px] md:h-[30px] mr-[12px] transition xs:w-[50px] sm:w-[50px] md:w-[30px] hover:scale-125"
-            />
-          </a>
-        </div>
-      </div>
-      <div className="xs:w-[100vw] sm:w-[100vw] md:w-[50vw] xs:h-[50vh] sm:h-[50vh] md:h-[100vh]  ">
-        <img src={developer} className="bg-white aspect-square " />
-      </div>
-    </div>
-  );
-};
+const Intro = memo(() => {
+	const sparklogoRef = React.useRef<HTMLDivElement>(null);
+	const spark2logoRef = React.useRef<HTMLDivElement>(null);
+	const titleRef = React.useRef<HTMLDivElement>(null);
+	const subtitleRef = React.useRef<HTMLDivElement>(null);
+
+	React.useEffect(() => {
+		if (
+			titleRef.current &&
+			subtitleRef.current &&
+			sparklogoRef.current &&
+			spark2logoRef.current
+		) {
+			gsap
+				.timeline()
+				.fromTo(
+					titleRef.current,
+					{ opacity: 0, translateY: -20 },
+					{ opacity: 1, translateY: 0, duration: 0.5 }
+				)
+				.fromTo(
+					subtitleRef.current,
+					{ translateY: -5, opacity: 0 },
+					{ translateY: 0, opacity: 1, duration: 0.2 }
+				)
+				.fromTo(
+					sparklogoRef.current,
+					{ scale: 0 },
+					{ scale: 1, duration: 0.3, repeat: -1, repeatDelay: 2, yoyo: true }
+				)
+				.fromTo(
+					spark2logoRef.current,
+					{ scale: 0 },
+					{ scale: 1, duration: 0.3, repeat: -1, repeatDelay: 2, yoyo: true }
+				);
+		}
+
+		return () => {
+			if (
+				titleRef.current &&
+				subtitleRef.current &&
+				sparklogoRef.current &&
+				spark2logoRef.current
+			) {
+				gsap.killTweensOf([
+					titleRef.current,
+					subtitleRef.current,
+					sparklogoRef.current,
+					spark2logoRef.current,
+				]);
+			}
+		};
+	}, []);
+
+	return (
+		<div className="w-screen flex flex-col xs:h-auto sm:h-auto md:h-screen justify-center gradient-background items-center card IntroMainDiv  ">
+			<div className="w-screen h-min-screen pt-[8rem]  flex flex-col justify-start items-center">
+				<div className="w-3/4 flex flex-col justify-center items-center">
+					<div
+						className="xs:w-[3em] sm:w-[3em] md:w-[5em] self-end "
+						ref={sparklogoRef}>
+						<Logo width={"100%"} color="white" />
+					</div>
+					<h1
+						className="font-Acorn text-primary font-bold mainheading xs:text-[50px] sm:text-[50px] md:text-9xl"
+						ref={titleRef}>
+						Hi. I'm Shiva.
+						<br />A Developer.
+					</h1>
+					<div
+						className="xs:w-[3em] sm:w-[3em] md:w-[5em] self-start  "
+						ref={spark2logoRef}>
+						<Logo width={"100%"} color="white" />
+					</div>
+				</div>
+				<p
+					className="font-Poppins  mt-[40px] mb-[40px]  text-primary xs:text-[16px] sm:text-[16px] md:text-[20px] font-normal capitalize text-center px-[30px]"
+					ref={subtitleRef}>
+					Welcome to my little corner on the internet.
+					<br /> I am a full stack developer with a passion for building
+					beautiful and functional applications.
+				</p>
+			</div>
+		</div>
+	);
+});
 
 export default Intro;
