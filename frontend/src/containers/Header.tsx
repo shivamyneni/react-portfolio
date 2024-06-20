@@ -39,22 +39,12 @@ const Header = () => {
 
   return (
     <div
-      className={`w-screen h-auto flex flex-col xs:px-[15px] sm:px-[15px] md:px-[30px] xs:py-[15px] sm:py-[15px] md:py-[20px] fixed  z-50 backdrop-filter backdrop-blur-md bg-white 
+      className={`w-screen h-auto flex flex-col xs:px-[15px] sm:px-[15px] md:px-[30px] xs:py-[15px] sm:py-[15px] md:py-[40px] fixed  z-50
         
-      }`}
-    >
+      }`}>
       <div
-        className="w-auto h-auto flex flex-row  justify-between"
-        ref={headerRef}
-      >
-        <div className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit flex flex-row items-end justify-start ">
-          <p
-            className=" font-bold xs:text-[20px] sm:text-[15px] transition text-[#5352ED] md:text-[30px] font-telugu uppercase"
-            ref={navbarHeaderRef}
-          >
-            శివ.
-          </p>
-        </div>
+        className="w-auto h-auto flex flex-row  justify-center"
+        ref={headerRef}>
         <Navbar />
         <UseAnimations
           animation={menu4}
@@ -66,29 +56,25 @@ const Header = () => {
 
       <div
         className="w-[100vw] flex flex-col justify-around  h-0 overflow-hidden  "
-        ref={navbarRef}
-      >
+        ref={navbarRef}>
         <div
           className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit opacity-0  navitem"
-          ref={navitemRef}
-        >
-          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-[#5352ED] md:text-[20px] font-pixel mb-[8px] uppercase">
+          ref={navitemRef}>
+          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-primary md:text-[20px] font-pixel mb-[8px] uppercase">
             experiences
           </p>
         </div>
         <div
           className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit navitem opacity-0 "
-          ref={navitemRef}
-        >
-          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-[#5352ED] md:text-[20px] font-pixel mb-[8px] uppercase">
+          ref={navitemRef}>
+          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-primary md:text-[20px] font-pixel mb-[8px] uppercase">
             personal projects
           </p>
         </div>
         <div
           className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit navitem  opacity-0"
-          ref={navitemRef}
-        >
-          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-[#5352ED] md:text-[20px] font-pixel mb-[8px] uppercase">
+          ref={navitemRef}>
+          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-primary md:text-[20px] font-pixel mb-[8px] uppercase">
             Skills
           </p>
         </div>
