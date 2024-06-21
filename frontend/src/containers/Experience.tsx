@@ -27,10 +27,15 @@ const Experience = () => {
 			ref={ExperienceRef}>
 			<div className="w-full xs:h-1/2 sm:h-1/2 md:h-screen flex xs:flex-col sm:flex-col md:flex-row justify-center items-center ">
 				<div className="w-full xs:h-1/2 sm:h-1/2 md:h-full flex justify-center items-center ">
-					<Spline
-						className="w-full h-full flex justify-center items-center"
-						scene="https://prod.spline.design/2cN3s53ZpKZdsCcD/scene.splinecode"
-					/>
+					
+					<iframe
+        title="Spline Scene"
+        src="https://my.spline.design/miniroommusiccopy-6d221273a98ca939a13b2d19173d0f41/"
+        frameBorder="0"
+        width="100%"
+        height="100%"
+       
+      ></iframe>
 					<div className="xs:hidden sm:hidden md:flex md:w-1/2 h-full flex flex-col justify-center items-start pr-[80px]">
 						<p className="font-Acorn text-primary mt-[20px] font-bold  xs:text-[2rem] sm:text-[2rem] md:text-[30px] heading">
 							Professional Experience
