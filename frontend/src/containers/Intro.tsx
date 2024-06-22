@@ -63,24 +63,24 @@ const Intro = memo(() => {
 			<div className="w-screen h-min-screen pt-[8rem]  flex flex-col justify-start items-center">
 				<div className="w-3/4 flex flex-col justify-center items-center">
 					<div
-						className="xs:w-[3em] sm:w-[3em] md:w-[5em] self-end "
+						className="xs:w-[3em] sm:w-[3em] md:w-[110px] lg:w-[5em] self-end "
 						ref={sparklogoRef}>
 						<Logo width={"100%"} color="white" />
 					</div>
 					<h1
-						className="font-Acorn text-primary font-bold mainheading xs:text-[50px] sm:text-[50px] md:text-9xl"
+						className="font-Acorn text-primary font-bold mainheading xs:text-[50px] sm:text-[50px] md:text-[100px] lg:text-9xl"
 						ref={titleRef}>
 						Hi. I'm Shiva.
 						<br />A Developer.
 					</h1>
 					<div
-						className="xs:w-[3em] sm:w-[3em] md:w-[5em] self-start  "
+						className="xs:w-[3em] sm:w-[3em] md:w-[110px] lg:w-[5em] self-start  "
 						ref={spark2logoRef}>
 						<Logo width={"100%"} color="white" />
 					</div>
 				</div>
 				<p
-					className="font-Poppins  mt-[40px] mb-[40px]  text-primary xs:text-[16px] sm:text-[16px] md:text-[20px] font-normal capitalize text-center px-[30px]"
+					className="font-Poppins  mt-[40px] mb-[40px]  text-primary xs:text-[16px] sm:text-[16px] md:text-[20px] lg:text-[20px] font-normal capitalize text-center px-[30px]"
 					ref={subtitleRef}>
 					Welcome to my little corner on the internet.
 					<br /> I am a full stack developer with a passion for building
