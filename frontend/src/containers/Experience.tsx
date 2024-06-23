@@ -26,7 +26,7 @@ const Experience = () => {
 			className="w-screen h-auto bg-white rounded-t-[30px] h-auto"
 			ref={ExperienceRef}>
 			<div className="w-screen  xs:h-[50vh] sm:h-[50vh] md:h-auto flex xs:flex-col sm:flex-col md:flex-row justify-center items-center ">
-				<div className="xs:w-full sm:w-full md:w-[50vw] xs:h-full sm:h-full md:h-[50vh] lg:h- flex justify-center items-center ">
+				<div className="xs:w-full sm:w-full md:w-[50vw] lg:w-[70vw] xs:h-full sm:h-full md:h-[50vh] lg:h-[100vh] flex justify-center items-center ">
 					<iframe
 						title="Spline Scene"
 						src="https://my.spline.design/miniroommusiccopy-6d221273a98ca939a13b2d19173d0f41/"
@@ -78,17 +78,27 @@ const Experience = () => {
 							<p className="font-Acorn self-start text-[18px] text-primary font-bold">
 								Tech Stack
 							</p>
-							<div className="flex flex-row flex-wrap mt-[6px] gap-[4px]">
+							<div className="flex flex-row flex-wrap mt-[6px] gap-[8px]">
 								{TechStack.map((tech) => {
-									return <img className="w-[34px]" src={tech.src} />;
+									return (
+										<img
+											className="w-[34px] transition hover:scale-125 ease-in-out"
+											src={tech.src}
+										/>
+									);
 								})}
 							</div>
 							<p className="font-Acorn self-start text-[18px] mt-[10px] text-primary font-bold">
 								Tool Stack
 							</p>
-							<div className="flex flex-row flex-wrap mt-[6px] gap-[4px]">
+							<div className="flex flex-row flex-wrap mt-[6px] gap-[8px]">
 								{ToolStack.map((tech) => {
-									return <img className="w-[34px]" src={tech.src} />;
+									return (
+										<img
+											className="w-[34px] transition hover:scale-125 ease-in-out"
+											src={tech.src}
+										/>
+									);
 								})}
 							</div>
 						</div>
@@ -140,17 +150,27 @@ const Experience = () => {
 					<p className="font-Acorn self-start text-[18px] text-primary font-bold">
 						Tech Stack
 					</p>
-					<div className="flex flex-row mt-[6px] flex-wrap gap-[4px]">
+					<div className="flex flex-row mt-[6px] flex-wrap gap-[8px]">
 						{TechStack.map((tech) => {
-							return <img className="w-[34px]" src={tech.src} />;
+							return (
+								<img
+									className="w-[34px] hover:scale-125 ease-in-out"
+									src={tech.src}
+								/>
+							);
 						})}
 					</div>
 					<p className="font-Acorn self-start text-[18px] mt-[10px] text-primary font-bold">
 						Tool Stack
 					</p>
-					<div className="flex flex-row mt-[6px] flex-wrap gap-[4px]">
+					<div className="flex flex-row mt-[6px] flex-wrap gap-[8px]">
 						{ToolStack.map((tech) => {
-							return <img className="w-[34px]" src={tech.src} />;
+							return (
+								<img
+									className="w-[34px] hover:scale-125 ease-in-out"
+									src={tech.src}
+								/>
+							);
 						})}
 					</div>
 				</div>
