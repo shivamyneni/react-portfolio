@@ -59,7 +59,7 @@ const Intro = memo(() => {
 	}, []);
 
 	return (
-		<div className="w-screen flex flex-col xs:h-screen sm:h-screen md:h-screen justify-center gradient-background items-center card IntroMainDiv  ">
+		<div className="w-screen flex flex-col xs:h-screen sm:h-screen md:min-h-screen h-auto justify-center gradient-background items-center card IntroMainDiv  ">
 			<div className="w-screen h-min-screen pt-[8rem]  flex flex-col justify-start items-center">
 				<div className="w-3/4 flex flex-col justify-center items-center">
 					<div
