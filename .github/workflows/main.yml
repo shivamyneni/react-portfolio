@@ -1,0 +1,41 @@
+name: Portfolio Deployment
+on:
+    push:
+        branches:
+            - master
+jobs:
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Master
+              uses: actions/checkout@v2
+            - name: Install dependencies
+              run: npm install
+            - name: Build
+              run: npm run build
+            - name: Upload Bild Files
+              uses: actions/upload-artifact@v2
+              with:
+                name: build
+                path: build
+    deploy:
+        name: Deploy
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout master
+              uses: actions/checkout@v2
+            - name : Download build files
+              uses: actions/download-artifact@v2
+              with:
+                name: build
+                path: build
+            - name: Deploy to firebase
+              uses: w9jds/firebase-action@master
+              with:
+                  args: deploy --only hosting
+              env:
+                  FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+            
+            
