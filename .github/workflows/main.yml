@@ -13,6 +13,8 @@ jobs:
             - name: Install dependencies
               run: npm install
             - name: Build
+              env:
+                CI: false
               run: npm run build
             - name: Upload Bild Files
               uses: actions/upload-artifact@v2
