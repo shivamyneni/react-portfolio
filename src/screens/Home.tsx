@@ -11,19 +11,14 @@ import Intro from "@containers/Intro";
 import About from "@containers/About";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Experience from "@containers/Experience";
-import SocialButtons from "@components/Socialbutton";
+import SocialButtons from "@containers/Socialbutton";
 import Skills from "@containers/Skills";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = memo(() => {
   return (
-    <div className="w-screen flex flex-col  h-min-screen justify-center  items-center  cards">
-      <Intro />
-      <Experience />
-      {/* <Skills/> */}
-      <SocialButtons/>
-    </div>
+   <></>
   );
 });
 

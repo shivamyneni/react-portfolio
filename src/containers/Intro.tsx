@@ -1,9 +1,12 @@
 import React, { memo } from "react";
 import "../index.css";
 import gsap from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TextReveal from "components/magicui/text-reveal";
 import Logo from "assets/Images/Logo";
+import SparklesText from "@components/magicui/sparkles-text";
 
+gsap.registerPlugin(ScrollTrigger);
 const Intro = memo(() => {
 	const sparklogoRef = React.useRef<HTMLDivElement>(null);
 	const spark2logoRef = React.useRef<HTMLDivElement>(null);
@@ -58,9 +61,77 @@ const Intro = memo(() => {
 		};
 	}, []);
 
+	React.useEffect(() => {
+		gsap.fromTo(
+			".quote1",
+			{ opacity: 0,yPercent:100},
+			{
+				scrollTrigger: {
+					trigger: ".quote1",
+					start: "top 80%",
+					end: "bottom 30%",
+					scrub: 1,
+				},
+				opacity: 1,
+				yPercent:0,
+				duration: 0.5,
+				ease: "sine",
+			}
+		);
+		gsap.fromTo(
+			".quote2",
+			{ opacity: 0,yPercent:100 },
+			{
+				scrollTrigger: {
+					trigger: ".quote2",
+					start: "top 75%",
+					end: "bottom 35%",
+					scrub: 1,
+				},
+				yPercent:0,
+				opacity: 1,
+				duration: 0.5,
+				ease: "sine",
+			}
+		);
+		gsap.fromTo(
+			".quote3",
+			{ opacity: 0 ,yPercent:100},
+			{
+				scrollTrigger: {
+					trigger: ".quote3",
+					start: "top 70%",
+					end: "bottom 40%",
+					scrub: 1,
+				},
+				yPercent:0,
+				opacity: 1,
+				duration: 0.5,
+				ease: "sine",
+			}
+		);
+		gsap.fromTo(
+			".quote4",
+			{ opacity: 0,yPercent:100 },
+			{
+				scrollTrigger: {
+					trigger: ".quote4",
+					start: "top 75%",
+					end: "bottom 45%",
+					
+					scrub: 1,
+				},
+				yPercent:0,
+				opacity: 1,
+				duration: 0.5,
+				ease: "sine",
+			}
+		);
+	}, []);
+
 	return (
-		<div className="w-screen flex flex-col xs:h-screen sm:h-screen md:min-h-screen h-auto justify-center gradient-background items-center card IntroMainDiv  ">
-			<div className="w-screen h-min-screen pt-[8rem]  flex flex-col justify-start items-center">
+		<div className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection ">
+			<div className="w-screen h-screen pt-[8rem]  flex flex-col justify-start items-center gradient-background ">
 				<div className="w-3/4 flex flex-col justify-center items-center">
 					<div
 						className="xs:w-[3em] sm:w-[3em] md:w-[110px] lg:w-[5em] self-end "
@@ -68,9 +139,9 @@ const Intro = memo(() => {
 						<Logo width={"100%"} color="white" />
 					</div>
 					<h1
-						className="font-Acorn text-primary font-bold mainheading xs:text-[50px] sm:text-[50px] md:text-[100px] lg:text-9xl"
+						className="font-Acorn text-primary font-bold mainheading xs:text-[50px] sm:text-[50px] md:text-[100px] lg:text-9xl "
 						ref={titleRef}>
-						Hi. I'm Shiva.
+						Hi, I'm Shiva.
 						<br />A Developer.
 					</h1>
 					<div
@@ -85,6 +156,22 @@ const Intro = memo(() => {
 					Welcome to my little corner on the internet.
 					<br /> I am a full stack developer with a passion for building
 					beautiful and functional applications.
+				</p>
+			</div>
+			<div
+				className="w-screen h-3/4 px-[60px] py-[80px] flex flex-col items-start justify-around
+	">
+				<p className="font-Poppins font-bold text-[48px] text-primary capitalize quote1 ">
+					Crafting Dynamic Web Experiences.
+				</p>
+				<p className="font-Poppins font-bold text-[48px] text-primary capitalize quote2 ">
+					MERN Stack Enthusiast.
+				</p>
+				<p className="font-Poppins font-bold text-[48px] text-primary capitalize quote3 ">
+					Design Aficionado.
+				</p>
+				<p className="font-Poppins font-bold text-[48px] text-primary capitalize quote4 ">
+					User Experience Advocate.
 				</p>
 			</div>
 		</div>
