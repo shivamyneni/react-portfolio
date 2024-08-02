@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 
-import Spline from "@splinetool/react-spline";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { TechStack, ToolStack } from "utils/styles";
@@ -25,6 +24,9 @@ const Experience = () => {
 		<section
 			className="w-screen h-auto bg-white rounded-t-[30px] h-auto"
 			ref={ExperienceRef}>
+			<h1 className="font-Acorn text-primary font-bold mainheading xs:text-[50px] sm:text-[50px] md:text-[32px] lg:text-9xl  mt-[30px] justify-self-end">
+				My Work
+			</h1>
 			<div className="w-screen  xs:h-[50vh] sm:h-[50vh] md:h-auto flex xs:flex-col sm:flex-col md:flex-row justify-center items-center ">
 				<div className="xs:w-full sm:w-full md:w-[50vw] lg:w-[70vw] xs:h-full sm:h-full md:h-[50vh] lg:h-[100vh] flex justify-center items-center ">
 					<iframe

@@ -4,152 +4,159 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: "Acorn";
-  src: url("./assets/fonts/Acorn-Regular.eot");
-  src: local("./assets/fonts/Acorn-Regular"), local("Acorn-Regular"),
-    url("./assets/fonts/Acorn-Regular.eot?#iefix") format("embedded-opentype"),
-    url("./assets/fonts/Acorn-Regular.woff2") format("woff2"),
-    url("./assets/fonts/Acorn-Regular.woff") format("woff"),
-    url("./assets/fonts/Acorn-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Acorn";
+	src: url("./assets/fonts/Acorn-Regular.eot");
+	src: local("./assets/fonts/Acorn-Regular"), local("Acorn-Regular"),
+		url("./assets/fonts/Acorn-Regular.eot?#iefix") format("embedded-opentype"),
+		url("./assets/fonts/Acorn-Regular.woff2") format("woff2"),
+		url("./assets/fonts/Acorn-Regular.woff") format("woff"),
+		url("./assets/fonts/Acorn-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Acorn";
-  src: url("./assets/fonts/Acorn-Bold.eot");
-  src: local("./assets/fonts/Acorn-Bold"), local("Acorn-Bold"),
-    url("./assets/fonts/Acorn-Bold.eot?#iefix") format("embedded-opentype"),
-    url("./assets/fonts/Acorn-Bold.woff2") format("woff2"),
-    url("./assets/fonts/Acorn-Bold.woff") format("woff"),
-    url("./assets/fonts/Acorn-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Acorn";
+	src: url("./assets/fonts/Acorn-Bold.eot");
+	src: local("./assets/fonts/Acorn-Bold"), local("Acorn-Bold"),
+		url("./assets/fonts/Acorn-Bold.eot?#iefix") format("embedded-opentype"),
+		url("./assets/fonts/Acorn-Bold.woff2") format("woff2"),
+		url("./assets/fonts/Acorn-Bold.woff") format("woff"),
+		url("./assets/fonts/Acorn-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Acorn";
-  src: url("./assets/fonts/Acorn-Medium.eot");
-  src: local("./assets/fonts/Acorn-Medium"), local("Acorn-Medium"),
-    url("./assets/fonts/Acorn-Medium.eot?#iefix") format("embedded-opentype"),
-    url("./assets/fonts/Acorn-Medium.woff2") format("woff2"),
-    url("./assets/fonts/Acorn-Medium.woff") format("woff"),
-    url("./assets/fonts/Acorn-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Acorn";
+	src: url("./assets/fonts/Acorn-Medium.eot");
+	src: local("./assets/fonts/Acorn-Medium"), local("Acorn-Medium"),
+		url("./assets/fonts/Acorn-Medium.eot?#iefix") format("embedded-opentype"),
+		url("./assets/fonts/Acorn-Medium.woff2") format("woff2"),
+		url("./assets/fonts/Acorn-Medium.woff") format("woff"),
+		url("./assets/fonts/Acorn-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Acorn";
-  src: url("./assets/fonts/Acorn-Thin.eot");
-  src: local("./assets/fonts/Acorn-Thin"), local("Acorn-Thin"),
-    url("./assets/fonts/Acorn-Thin.eot?#iefix") format("embedded-opentype"),
-    url("./assets/fonts/Acorn-Thin.woff2") format("woff2"),
-    url("./assets/fonts/Acorn-Thin.woff") format("woff"),
-    url("./assets/fonts/Acorn-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Acorn";
+	src: url("./assets/fonts/Acorn-Thin.eot");
+	src: local("./assets/fonts/Acorn-Thin"), local("Acorn-Thin"),
+		url("./assets/fonts/Acorn-Thin.eot?#iefix") format("embedded-opentype"),
+		url("./assets/fonts/Acorn-Thin.woff2") format("woff2"),
+		url("./assets/fonts/Acorn-Thin.woff") format("woff"),
+		url("./assets/fonts/Acorn-Thin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Acorn";
-  src: url("./assets/fonts/Acorn-SemiBold.eot");
-  src: local("./assets/fonts/Acorn-SemiBold"), local("Acorn-SemiBold"),
-    url("./assets/fonts/Acorn-SemiBold.eot?#iefix") format("embedded-opentype"),
-    url("./assets/fonts/Acorn-SemiBold.woff2") format("woff2"),
-    url("./assets/fonts/Acorn-SemiBold.woff") format("woff"),
-    url("./assets/fonts/Acorn-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Acorn";
+	src: url("./assets/fonts/Acorn-SemiBold.eot");
+	src: local("./assets/fonts/Acorn-SemiBold"), local("Acorn-SemiBold"),
+		url("./assets/fonts/Acorn-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("./assets/fonts/Acorn-SemiBold.woff2") format("woff2"),
+		url("./assets/fonts/Acorn-SemiBold.woff") format("woff"),
+		url("./assets/fonts/Acorn-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Acorn";
-  src: url("./assets/fonts/Acorn-ExtraLight.eot");
-  src: local("./assets/fonts/Acorn-ExtraLight"), local("Acorn-ExtraLight"),
-    url("./assets/fonts/Acorn-ExtraLight.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/Acorn-ExtraLight.woff2") format("woff2"),
-    url("./assets/fonts/Acorn-ExtraLight.woff") format("woff"),
-    url("./assets/fonts/Acorn-ExtraLight.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Acorn";
+	src: url("./assets/fonts/Acorn-ExtraLight.eot");
+	src: local("./assets/fonts/Acorn-ExtraLight"), local("Acorn-ExtraLight"),
+		url("./assets/fonts/Acorn-ExtraLight.eot?#iefix")
+			format("embedded-opentype"),
+		url("./assets/fonts/Acorn-ExtraLight.woff2") format("woff2"),
+		url("./assets/fonts/Acorn-ExtraLight.woff") format("woff"),
+		url("./assets/fonts/Acorn-ExtraLight.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Acorn";
-  src: url("./assets/fonts/Acorn-Light.eot");
-  src: local("./assets/fonts/Acorn-ExtraLight"), local("Acorn-ExtraLight"),
-    url("./assets/fonts/Acorn-Light.eot?#iefix") format("embedded-opentype"),
-    url("./assets/fonts/Acorn-Light.woff2") format("woff2"),
-    url("./assets/fonts/Acorn-Light.woff") format("woff"),
-    url("./assets/fonts/Acorn-Light.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Acorn";
+	src: url("./assets/fonts/Acorn-Light.eot");
+	src: local("./assets/fonts/Acorn-ExtraLight"), local("Acorn-ExtraLight"),
+		url("./assets/fonts/Acorn-Light.eot?#iefix") format("embedded-opentype"),
+		url("./assets/fonts/Acorn-Light.woff2") format("woff2"),
+		url("./assets/fonts/Acorn-Light.woff") format("woff"),
+		url("./assets/fonts/Acorn-Light.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 .mainheading {
-  /* font-size: clamp(3rem, 0.5692rem + 8.238vw, 13.75rem);
+	/* font-size: clamp(3rem, 0.5692rem + 8.238vw, 13.75rem);
   text-align: center;
 
   line-height: 100%; */
-  letter-spacing: -2px;
+	letter-spacing: -2px;
 }
 
 .glassbackground {
-  background: rgba(2, 90, 78, 0.6);
+	background: rgba(2, 90, 78, 0.6);
 
-  backdrop-filter: blur(11.5px);
-  -webkit-backdrop-filter: blur(11.5px);
-  border-radius: 10px;
+	backdrop-filter: blur(11.5px);
+	-webkit-backdrop-filter: blur(11.5px);
+	border-radius: 10px;
 }
 
 .gradient-background {
-  background: linear-gradient(211deg, #ffc374, #f9e897, #7f9f80);
-  background-size: 180% 180%;
-  animation: gradient-animation 5s ease infinite;
+	background: linear-gradient(211deg, #ffc374, #f9e897, #7f9f80);
+	background-size: 180% 180%;
+	animation: gradient-animation 5s ease infinite;
 }
 
+.gradientborder {
+	border-color: linear-gradient(211deg, #ffc374, #f9e897, #7f9f80);
+}
 @keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
 
 .hoverMebottom:after {
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  width: 0;
-  height: 2px;
-  background: #025a4e;
-  border-radius: 100;
-  display: block;
-  content: "";
-  transition: width 0.4s ease-in-out;
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	width: 0;
+	height: 2px;
+	background: #025a4e;
+	border-radius: 100;
+	display: block;
+	content: "";
+	transition: width 0.4s ease-in-out;
 }
 .hoverMebottom:hover:after {
-  width: 100%;
+	width: 100%;
 }
 
 .button {
-  position: relative;
+	position: relative;
 }

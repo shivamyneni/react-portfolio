@@ -1,86 +1,64 @@
-import Navbar from "@components/Navbar.tsx";
 import React from "react";
 import gsap from "gsap";
 import UseAnimations from "react-useanimations";
 import menu4 from "react-useanimations/lib/menu4";
-const Header = () => {
-  const headerRef = React.useRef(null);
-  const navitemRef = React.useRef<any>(null);
-  const navbarRef = React.useRef(null);
-  const navbarHeaderRef = React.useRef<any>(null);
+import { DockDemo } from "./Dock";
 
-  const [showNavbar, setShowNavbar] = React.useState<boolean>(false);
-  const [headerText, setHeaderText] = React.useState<string>("hivamyneni");
-  React.useEffect(() => {
-    if (showNavbar) {
-      gsap
-        .timeline()
-        .to(navbarRef.current, {
-          height: navitemRef.current.clientHeight * 5,
-          duration: 0.5,
-        })
-        .to(".navitem", { opacity: 1, duration: 0.5 });
-    }
-    if (!showNavbar) {
-      gsap
-        .timeline()
-        .to(".navitem", { opacity: 0, duration: 0.5 })
-        .to(navbarRef.current, { height: 0, duration: 0.5 });
-    }
-  }, [showNavbar]);
+// Define the type for the props
+interface NavbarProps {
+	scrollToSection: (section: string) => void; // Function type for scrollToSection
+}
 
-  React.useEffect(() => {
-    gsap.fromTo(
-      headerRef.current,
-      { yPercent: -100 },
-      { yPercent: 0, duration: 1 }
-    );
-  }, []);
+const Header: React.FC<NavbarProps> = ({ scrollToSection }) => {
+	const headerRef = React.useRef(null);
+	const navbarRef = React.useRef(null);
 
-  return (
-    <div
-      className={`w-screen h-auto flex flex-col xs:px-[15px] sm:px-[15px] md:px-[30px] xs:py-[15px] sm:py-[15px] md:py-[40px] fixed  z-50
-        
+	React.useEffect(() => {
+		gsap.fromTo(
+			headerRef.current,
+			{ yPercent: -100 },
+			{ yPercent: 0, duration: 1 }
+		);
+	}, []);
+
+	return (
+		<div
+			className={`w-[100vw]  z-1000 top-[30px] flex xs:justify-end md:justify-center 
       }`}>
-      <div
-        className="w-auto h-auto flex flex-row  justify-center"
-        ref={headerRef}>
-        <Navbar />
-        <UseAnimations
-          animation={menu4}
-          size={38}
-          className="z-50 md:hidden xs:flex sm:hidden"
-          onClick={() => setShowNavbar(!showNavbar)}
-        />
-      </div>
-
-      <div
-        className="w-[100vw] flex flex-col justify-around  h-0 overflow-hidden  "
-        ref={navbarRef}>
-        <div
-          className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit opacity-0  navitem"
-          ref={navitemRef}>
-          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-primary md:text-[20px] font-pixel mb-[8px] uppercase">
-            experiences
-          </p>
-        </div>
-        <div
-          className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit navitem opacity-0 "
-          ref={navitemRef}>
-          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-primary md:text-[20px] font-pixel mb-[8px] uppercase">
-            personal projects
-          </p>
-        </div>
-        <div
-          className="xs:w-[40vw] sm:w-[40vw] md:w-[25vw] h-fit navitem  opacity-0"
-          ref={navitemRef}>
-          <p className=" font-bold xs:text-[15px] sm:text-[15px] text-primary md:text-[20px] font-pixel mb-[8px] uppercase">
-            Skills
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+			<div
+				className="w-fit mt-[30px] rounded-full flex xs:flex-col sm:flex-col md:flex-row xs:py-[15px] sm:py-[15px] md:py-[20px] xs:items-end sm:items-end md:items-center xs:px-[20px] sm:px-[20px] md:justify-center fixed xs:bg-transparent sm:bg-transparent md:bg-white xs:bg-opacity-100 sm:bg-opacity-100 md:bg-opacity-60 xs:backdrop-blur-none sm:backdrop-blur-none md:backdrop-blur-md"
+				ref={navbarRef}>
+				<div className=" z-50 top   relative">
+					<a
+						href="https://drive.google.com/file/d/1-qinmAsn7tVUNnVHr4KZ7Li-0BCv3EIp/view?usp=share_link"
+						className="font-Acorn w-fit h-fit text-primary  font-semibold xs:text-[15px] sm:text-[13px] md:text-[16px]  mix-blend-overlay uppercase   hoverMebottom button cursor-pointer">
+						Resume
+					</a>
+				</div>
+				<div className=" z-50  ml-[16px] relative ">
+					<a
+						onClick={() => scrollToSection("IntroSection")}
+						className="font-Acorn w-fit h-fit text-primary font-semibold xs:text-[15px] sm:text-[13px] md:text-[16px]  mix-blend-overlay uppercase   hoverMebottom button cursor-pointer">
+						About
+					</a>
+				</div>
+				<div className="z-50  ml-[16px] relative ">
+					<a
+						onClick={() => scrollToSection("WorkSection")}
+						className="font-Acorn w-fit h-fit text-primary font-semibold xs:text-[15px] sm:text-[13px] md:text-[16px]  mix-blend-overlay uppercase   hoverMebottom button cursor-pointer">
+						work
+					</a>
+				</div>
+				<div className="z-50  ml-[16px] relative ">
+					<a
+						href="mailto:shivamynwni4816@gmail.com"
+						className="font-Acorn w-fit h-fit text-primary font-semibold xs:text-[15px] sm:text-[13px] md:text-[16px]  mix-blend-overlay uppercase   hoverMebottom button cursor-pointer">
+						contact
+					</a>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Header;
