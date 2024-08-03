@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextReveal from "components/magicui/text-reveal";
 import Logo from "assets/Images/Logo";
 import SparklesText from "@components/magicui/sparkles-text";
+import { MoveDownRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 const Intro = memo(() => {
@@ -61,73 +62,7 @@ const Intro = memo(() => {
 		};
 	}, []);
 
-	React.useEffect(() => {
-		gsap.fromTo(
-			".quote1",
-			{ opacity: 0,yPercent:100},
-			{
-				scrollTrigger: {
-					trigger: ".quote1",
-					start: "top 80%",
-					end: "bottom 30%",
-					scrub: 1,
-				},
-				opacity: 1,
-				yPercent:0,
-				duration: 0.5,
-				ease: "sine",
-			}
-		);
-		gsap.fromTo(
-			".quote2",
-			{ opacity: 0,yPercent:100 },
-			{
-				scrollTrigger: {
-					trigger: ".quote2",
-					start: "top 75%",
-					end: "bottom 35%",
-					scrub: 1,
-				},
-				yPercent:0,
-				opacity: 1,
-				duration: 0.5,
-				ease: "sine",
-			}
-		);
-		gsap.fromTo(
-			".quote3",
-			{ opacity: 0 ,yPercent:100},
-			{
-				scrollTrigger: {
-					trigger: ".quote3",
-					start: "top 70%",
-					end: "bottom 40%",
-					scrub: 1,
-				},
-				yPercent:0,
-				opacity: 1,
-				duration: 0.5,
-				ease: "sine",
-			}
-		);
-		gsap.fromTo(
-			".quote4",
-			{ opacity: 0,yPercent:100 },
-			{
-				scrollTrigger: {
-					trigger: ".quote4",
-					start: "top 75%",
-					end: "bottom 45%",
-					
-					scrub: 1,
-				},
-				yPercent:0,
-				opacity: 1,
-				duration: 0.5,
-				ease: "sine",
-			}
-		);
-	}, []);
+
 
 	return (
 		<div className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection ">
@@ -154,24 +89,18 @@ const Intro = memo(() => {
 					className="font-Poppins  mt-[40px] mb-[40px]  text-primary xs:text-[16px] sm:text-[16px] md:text-[20px] lg:text-[20px] font-normal capitalize text-center px-[30px]"
 					ref={subtitleRef}>
 					Welcome to my little corner on the internet.
-					<br /> I am a full stack developer with a passion for building
-					beautiful and functional applications.
+					{/* <br /> I am a full stack developer with a passion for building
+					beautiful and functional applications. */}
 				</p>
 			</div>
-			<div
-				className="w-screen h-3/4 px-[60px] py-[80px] flex flex-col items-start justify-around
-	">
-				<p className="font-Poppins font-bold text-[48px] text-primary capitalize quote1 ">
-					Crafting Dynamic Web Experiences.
-				</p>
-				<p className="font-Poppins font-bold text-[48px] text-primary capitalize quote2 ">
-					MERN Stack Enthusiast.
-				</p>
-				<p className="font-Poppins font-bold text-[48px] text-primary capitalize quote3 ">
-					Design Aficionado.
-				</p>
-				<p className="font-Poppins font-bold text-[48px] text-primary capitalize quote4 ">
-					User Experience Advocate.
+			<div className="w-[70%] h-screen  aspect-video flex flex-col justify-center items-start">
+				<div className=" flex flex-row justify-center items-center mb-[40px] ml-[-30px]">
+					<p className="font-Acorn text-[32px] font-bold text-primary">About</p>
+					<MoveDownRight size={36} className="ml-[8px] text-primary" />
+				</div>
+				<p className="font-Acorn font-bold xs:text-[24px] sm:text-[32px] md:text-[52px] text-center text-primary capitalize ">
+					` Hi! I am a full stack developer currently seeking full-time work
+					with a great company! `
 				</p>
 			</div>
 		</div>
