@@ -63,7 +63,11 @@ const Intro = memo(() => {
 	}, []);
 
 	React.useEffect(() => {
-		gsap.fromTo('.quote1',{yPercent:100,opacity:0},{yPercent:0,duration:2,opacity:1,ease:'sine',delay:3})
+		gsap.fromTo(
+			".quote1",
+			{ yPercent: 100, opacity: 0 },
+			{ yPercent: 0, duration: 2, opacity: 1, ease: "sine", delay: 3 }
+		);
 	}, []);
 
 	return (
@@ -93,7 +97,7 @@ const Intro = memo(() => {
 					Welcome to my little corner on the internet.
 				</p>
 			</div>
-			<div className="w-screen bg-opacity-10 px-[15%] xs:h-auto sm:h-auto md:h-screen mb-[20px]  aspect-video flex flex-col justify-center items-start bg-primary overflow-hidden ">
+			<div className="w-screen bg-opacity-10 px-[15%] xs:h-auto sm:h-auto md:h-screen mb-[20px]  aspect-video flex flex-col justify-center items-start bg-primary overflow-hidden  border-[4px] border-primary rounded-b-[50px] mx-[2px]">
 				<div className=" flex flex-row justify-center items-center mb-[40px] ml-[-30px] items-self-start xs:mt-[32px] sm:mt-[32px] md:mt-[10px]">
 					<p className="font-Acorn  md:text-[32px] font-bold text-primary ">
 						About
