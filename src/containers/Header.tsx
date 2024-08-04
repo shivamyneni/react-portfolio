@@ -23,10 +23,10 @@ const Header: React.FC<NavbarProps> = ({ scrollToSection }) => {
 
 	return (
 		<div
-			className={`w-[100vw]  z-1000 top-[30px] flex xs:justify-end md:justify-center 
+			className={`w-[100vw]  z-1000 top-[30px] flex justify-center 
       }`}>
 			<div
-				className="w-fit mt-[30px] rounded-full flex xs:flex-col sm:flex-col md:flex-row xs:py-[15px] sm:py-[15px] md:py-[20px] xs:items-end sm:items-end md:items-center xs:px-[20px] sm:px-[20px] md:justify-center fixed xs:bg-transparent sm:bg-transparent md:bg-white xs:bg-opacity-100 sm:bg-opacity-100 md:bg-opacity-60 xs:backdrop-blur-none sm:backdrop-blur-none md:backdrop-blur-md"
+				className="w-fit mt-[30px] border-[4px] border-opacity-70  border-primary rounded-full flex  xs:py-[15px] sm:py-[15px] md:py-[20px]  items-center xs:px-[20px] sm:px-[20px] justify-center fixed bg-white bg-opacity-60 backdrop-blur-md"
 				ref={navbarRef}>
 				<div className=" z-50 top   relative">
 					<a

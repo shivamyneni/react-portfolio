@@ -62,11 +62,13 @@ const Intro = memo(() => {
 		};
 	}, []);
 
-
+	React.useEffect(() => {
+		gsap.fromTo('.quote1',{yPercent:100,opacity:0},{yPercent:0,duration:2,opacity:1,ease:'sine',delay:3})
+	}, []);
 
 	return (
 		<div className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection ">
-			<div className="w-screen h-screen pt-[8rem]  flex flex-col justify-start items-center gradient-background ">
+			<div className="w-screen xs:h-auto sm:h-auto  md:h-screen pt-[8rem]  flex flex-col justify-start items-center gradient-background ">
 				<div className="w-3/4 flex flex-col justify-center items-center">
 					<div
 						className="xs:w-[3em] sm:w-[3em] md:w-[110px] lg:w-[5em] self-end "
@@ -89,16 +91,16 @@ const Intro = memo(() => {
 					className="font-Poppins  mt-[40px] mb-[40px]  text-primary xs:text-[16px] sm:text-[16px] md:text-[20px] lg:text-[20px] font-normal capitalize text-center px-[30px]"
 					ref={subtitleRef}>
 					Welcome to my little corner on the internet.
-					{/* <br /> I am a full stack developer with a passion for building
-					beautiful and functional applications. */}
 				</p>
 			</div>
-			<div className="w-[70%] h-screen  aspect-video flex flex-col justify-center items-start">
-				<div className=" flex flex-row justify-center items-center mb-[40px] ml-[-30px]">
-					<p className="font-Acorn text-[32px] font-bold text-primary">About</p>
-					<MoveDownRight size={36} className="ml-[8px] text-primary" />
+			<div className="w-screen bg-opacity-10 px-[15%] xs:h-auto sm:h-auto md:h-screen mb-[20px]  aspect-video flex flex-col justify-center items-start bg-primary overflow-hidden ">
+				<div className=" flex flex-row justify-center items-center mb-[40px] ml-[-30px] items-self-start xs:mt-[32px] sm:mt-[32px] md:mt-[10px]">
+					<p className="font-Acorn  md:text-[32px] font-bold text-primary ">
+						About
+					</p>
+					<MoveDownRight className="ml-[8px] text-[48px] text-primary" />
 				</div>
-				<p className="font-Acorn font-bold xs:text-[24px] sm:text-[32px] md:text-[52px] text-center text-primary capitalize ">
+				<p className="font-Acorn font-bold xs:text-[24px] sm:text-[32px] md:text-[64px] text-center text-primary capitalize quote1 block ">
 					` Hi! I am a full stack developer currently seeking full-time work
 					with a great company! `
 				</p>
