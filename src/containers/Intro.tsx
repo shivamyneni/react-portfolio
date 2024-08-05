@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextReveal from "components/magicui/text-reveal";
 import Logo from "assets/Images/Logo";
 import SparklesText from "@components/magicui/sparkles-text";
-import { MoveDownRight } from "lucide-react";
+import { Mouse, MoveDownRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 const Intro = memo(() => {
@@ -71,9 +71,9 @@ const Intro = memo(() => {
 	}, []);
 
 	return (
-		<div className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection ">
-			<div className="w-screen xs:h-auto sm:h-auto  md:h-screen pt-[8rem]  flex flex-col justify-start items-center gradient-background ">
-				<div className="w-3/4 flex flex-col justify-center items-center">
+		<div className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection  ">
+			<div className="w-screen xs:h-auto sm:h-auto  md:min-h-screen pt-[8rem]  flex flex-col justify-end items-center gradient-background">
+				<div className="w-3/4 flex flex-col justify-center items-center ">
 					<div
 						className="xs:w-[3em] sm:w-[3em] md:w-[110px] lg:w-[5em] self-end "
 						ref={sparklogoRef}>
@@ -92,12 +92,17 @@ const Intro = memo(() => {
 					</div>
 				</div>
 				<p
-					className="font-Poppins  mt-[40px] mb-[40px]  text-primary xs:text-[16px] sm:text-[16px] md:text-[20px] lg:text-[20px] font-normal capitalize text-center px-[30px]"
+					className="font-Poppins  mt-[40px] mb-[40px]  text-primary xs:text-[16px] sm:text-[16px] md:text-[20px] lg:text-[20px] font-normal capitalize text-center px-[30px] "
 					ref={subtitleRef}>
 					Welcome to my little corner on the internet.
 				</p>
+
+				<Mouse className="text-primary w-8 h-8 mb-2" />
+				<p className="font-Poppins text-sm text-primary mb-4 capitalize">
+					Scroll to View Content
+				</p>
 			</div>
-			<div className="w-screen bg-opacity-10 px-[15%] xs:h-auto sm:h-auto md:h-screen mb-[20px]  aspect-video flex flex-col justify-center items-start bg-primary overflow-hidden  border-[4px] border-primary rounded-b-[50px] mx-[2px]">
+			<div className="w-screen bg-opacity-10 px-[15%] xs:h-auto sm:h-auto  md:h-screen   mb-[20px]  xs:py-[10%] flex flex-col justify-center items-start bg-primary overflow-hidden  border-[4px] border-primary rounded-b-[2%] mx-[2px]">
 				<div className=" flex flex-row justify-center items-center mb-[40px] ml-[-30px] items-self-start xs:mt-[32px] sm:mt-[32px] md:mt-[10px]">
 					<p className="font-Acorn  md:text-[32px] font-bold text-primary ">
 						About
@@ -105,8 +110,8 @@ const Intro = memo(() => {
 					<MoveDownRight className="ml-[8px] text-[48px] text-primary" />
 				</div>
 				<p className="font-Acorn font-bold xs:text-[24px] sm:text-[32px] md:text-[64px] text-center text-primary capitalize quote1 block ">
-					` Hi! I am a full stack developer currently seeking full-time work
-					with a great company! `
+					Hi! I am a full stack developer currently seeking full-time work with
+					a great company!
 				</p>
 			</div>
 		</div>
