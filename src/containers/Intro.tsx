@@ -65,13 +65,13 @@ const Intro = memo(() => {
 		};
 	}, []);
 
-	React.useEffect(() => {
-		gsap.fromTo(
-			".quote1",
-			{ yPercent: 100, opacity: 0 },
-			{ yPercent: 0, duration: 1, opacity: 1, ease: "sine" }
-		);
-	}, []);
+	// React.useEffect(() => {
+	// 	gsap.fromTo(
+	// 		".quote1",
+	// 		{ yPercent: 100, opacity: 0 },
+	// 		{ yPercent: 0, duration: 1, opacity: 1, ease: "sine" }
+	// 	);
+	// }, []);
 
 	return (
 		<div className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection  ">
@@ -112,10 +112,12 @@ const Intro = memo(() => {
 					</p>
 					<MoveDownRight className="ml-[8px] w-8 h-8 text-primary" />
 				</div>
-				<p className="font-Acorn font-bold xs:text-[24px] sm:text-[32px] md:text-[64px] text-center text-primary capitalize quote1 block ">
-					Hi! I am a full stack developer currently seeking full-time work with
-					a great company!
-				</p>
+				<div className="text-reveal">
+					<span className="font-Acorn font-bold xs:text-[24px] sm:text-[32px] md:text-[64px] text-center text-primary capitalize quote1 block reveal-text">
+						Hi! I am a full stack developer currently seeking full-time work
+						with a great company!
+					</span>
+				</div>
 			</div>
 		</div>
 	);
