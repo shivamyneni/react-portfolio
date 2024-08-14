@@ -10,7 +10,7 @@ const MouseIcon: React.FC = () => {
 				rectRef.current,
 				{ translateY: 0 },
 				{
-					translateY: 3,
+					translateY: 1,
 					repeat: -1,
 					yoyo: true,
 					duration: 0.8,
@@ -21,7 +21,7 @@ const MouseIcon: React.FC = () => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			className="text-primary w-8 h-8 mb-2"
+			className="text-primary w-8 h-8 mb-2 transition duration-600 hover:translate-y-[1px]"
 			viewBox="0 0 24 24"
 			fill="none"
 			stroke="currentColor"
