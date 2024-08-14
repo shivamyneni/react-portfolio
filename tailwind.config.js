@@ -105,7 +105,6 @@ module.exports = {
 			colors: {
 				primary: "#025a4e",
 			},
-
 			animation: {
 				"border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
 				orbit: "orbit calc(var(--duration)*1s) linear infinite",

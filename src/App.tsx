@@ -62,7 +62,7 @@ function App() {
 					<Experience />
 				</section>
 				<section id="Skillssection" ref={IntrosectionRef}>
-					<Skills />
+					{/* <Skills /> */}
 				</section>
 
 				<SocialButtons />
