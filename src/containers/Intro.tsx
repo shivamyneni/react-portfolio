@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { forwardRef, memo } from "react";
 import "../index.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,7 +9,7 @@ import { Mouse, MoveDownRight } from "lucide-react";
 import MouseIcon from "icons/MouseIcon";
 
 gsap.registerPlugin(ScrollTrigger);
-const Intro = memo(() => {
+const Intro = memo(forwardRef<HTMLElement,{}>((props,ref) => {
 	const sparklogoRef = React.useRef<HTMLDivElement>(null);
 	const spark2logoRef = React.useRef<HTMLDivElement>(null);
 	const titleRef = React.useRef<HTMLDivElement>(null);
@@ -74,7 +74,7 @@ const Intro = memo(() => {
 	// }, []);
 
 	return (
-		<div className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection  ">
+		<div className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection  " ref={ref as React.RefObject<HTMLDivElement>}>
 			<div className="w-screen xs:h-auto sm:h-auto  md:min-h-screen pt-[8rem]  flex flex-col justify-end items-center gradient-background">
 				<div className="w-3/4 flex flex-col justify-center items-center ">
 					<div
@@ -121,6 +121,6 @@ const Intro = memo(() => {
 			</div>
 		</div>
 	);
-});
+}));
 
 export default Intro;

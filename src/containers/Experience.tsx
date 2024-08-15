@@ -1,30 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { TechStack, ToolStack } from "utils/styles";
 
-const Experience = () => {
-	const ExperienceRef = useRef<HTMLDivElement>();
-	useEffect(() => {
-		if (ExperienceRef.current) {
-			gsap.fromTo(
-				".heading",
-				{
-					opacity: 0,
-					duration: 4,
-					ease: "fadeIn",
-				},
-				{ opacity: 1 }
-			);
-		}
-	}, []);
+const Experience = forwardRef<HTMLElement, {}>((props, ref) => {
+	// const ref = useRef<HTMLDivElement>();
 
 	return (
 		<section
 			className="w-screen h-auto bg-white rounded-t-[30px] h-auto"
-			ref={ExperienceRef}>
-			
+			ref={ref as React.RefObject<HTMLElement>}>
 			<div className="w-screen  xs:h-[50vh] sm:h-[50vh] md:h-auto flex xs:flex-col sm:flex-col md:flex-row justify-center items-center ">
 				<div className="xs:w-full sm:w-full md:w-[50vw] lg:w-[70vw] xs:h-full sm:h-full md:h-[50vh] lg:h-[100vh] flex justify-center items-center ">
 					<iframe
@@ -177,5 +163,5 @@ const Experience = () => {
 			</div>
 		</section>
 	);
-};
+});
 export default Experience;
