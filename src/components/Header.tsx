@@ -2,7 +2,6 @@ import React from "react";
 import gsap from "gsap";
 import UseAnimations from "react-useanimations";
 import menu4 from "react-useanimations/lib/menu4";
-import { DockDemo } from "./Dock";
 
 // Define the type for the props
 interface NavbarProps {

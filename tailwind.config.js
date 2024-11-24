@@ -13,6 +13,14 @@ module.exports = {
 			...defaultTheme.screens,
 		},
 		extend: {
+			textStrokeWidth: {
+				1: "1px",
+				2: "2px",
+			},
+			textStrokeColor: {
+				white: "#ffffff",
+				black: "#000000",
+			},
 			keyframes: {
 				orbit: {
 					"0%": {
@@ -117,5 +125,17 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		require("tailwind-scrollbar-hide"),
+		function ({ addUtilities }) {
+			addUtilities({
+				".text-stroke": {
+					"-webkit-text-stroke": "1px black",
+				},
+				".text-stroke-2": {
+					"-webkit-text-stroke": "3px white",
+				},
+			});
+		},
+	],
 };

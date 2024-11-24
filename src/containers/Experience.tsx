@@ -9,7 +9,7 @@ const Experience = forwardRef<HTMLElement, {}>((props, ref) => {
 
 	return (
 		<section
-			className="w-screen h-auto bg-white rounded-t-[30px] h-auto"
+			className="w-screen h-auto bg-white rounded-t-[30px] h-auto overflow-auto  scrollbar-hide"
 			ref={ref as React.RefObject<HTMLElement>}>
 			<div className="w-screen  xs:h-[50vh] sm:h-[50vh] md:h-auto flex xs:flex-col sm:flex-col md:flex-row justify-center items-center ">
 				<div className="xs:w-full sm:w-full md:w-[50vw] lg:w-[70vw] xs:h-full sm:h-full md:h-[50vh] lg:h-[100vh] flex justify-center items-center ">

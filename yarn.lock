@@ -10731,12 +10731,14 @@ __metadata:
     next-themes: ^0.3.0
     postcss: ^8.4.32
     react: ^18.2.0
+    react-animated-cursor: ^2.11.2
     react-app-rewire-alias: ^1.1.7
     react-app-rewired: ^2.2.1
     react-day-picker: 8.10.1
     react-dom: ^18.2.0
     react-hook-form: ^7.52.1
     react-icon-cloud: ^4.1.4
+    react-icons: ^5.3.0
     react-resizable-panels: ^2.0.22
     react-router-dom: ^6.22.2
     react-scripts: 5.0.1
@@ -10748,6 +10750,7 @@ __metadata:
     sass: ^1.69.5
     sonner: ^1.5.0
     tailwind-merge: ^2.4.0
+    tailwind-scrollbar-hide: ^1.1.7
     tailwindcss: latest
     three: ^0.159.0
     typescript: ^4.9.5
@@ -16448,6 +16451,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-animated-cursor@npm:^2.11.2":
+  version: 2.11.2
+  resolution: "react-animated-cursor@npm:2.11.2"
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 7393959d638de6833c1f75127ced65c4f7c605b30670de69aea2bf0ba14c00ff645b3d4be5ccaf9b6e57830c2afe8a0fe41be6b3981b9a68c4006b56e6d23b83
+  languageName: node
+  linkType: hard
+
 "react-app-polyfill@npm:^3.0.0":
   version: 3.0.0
   resolution: "react-app-polyfill@npm:3.0.0"
@@ -16562,6 +16575,15 @@ __metadata:
   peerDependencies:
     react: ">=16"
   checksum: 92fe04a4d1826b439172180347a27b83254770acb710078d9a7d4501547ad6499d824bb98b21776dcbf0301d05186cb464453fcdf6556b11b83a92a170f741b4
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "react-icons@npm:5.3.0"
+  peerDependencies:
+    react: "*"
+  checksum: 3aa5f50e05aafc6d31e0d995fe0d98560069aa88717b24ce8aaa082a7e7b20ca95e1e19d847ed6e52d658a5a30e15826af20d7554bf993a743edd55586db62e3
   languageName: node
   linkType: hard
 
@@ -18545,6 +18567,13 @@ __metadata:
   version: 2.4.0
   resolution: "tailwind-merge@npm:2.4.0"
   checksum: 442ab18af754eb90a1c730289b10a5df89ec8f197b4783bd31651fffc06ac06dbe7a8f491c2e133c906d6ab466170a5fc1f45aa2d22874e47706acf9d8b0cfe5
+  languageName: node
+  linkType: hard
+
+"tailwind-scrollbar-hide@npm:^1.1.7":
+  version: 1.1.7
+  resolution: "tailwind-scrollbar-hide@npm:1.1.7"
+  checksum: 2434a1db7a92fa91952ce4fbef7f80b83f121fa2fae27453cefc6030c06d368768e3172d3640ae6836fe4f813ed89b40c2f44b1f17756593ab4625259ef22a75
   languageName: node
   linkType: hard
 
