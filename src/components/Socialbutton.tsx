@@ -128,7 +128,7 @@ const SocialButtons = () => {
 	}, []);
 
 	return (
-		<div className=" xs:hidden sm:hidden md:flex flex-row gap-2  justify-center  fixed bottom-[40px] left-[20px] items-center ">
+		<div className=" xs:hidden sm:hidden md:flex flex-row gap-1  justify-center  fixed bottom-[0.5rem] left-[0.5rem] items-center ">
 			
 				<Instagram ref={InstalogoRef} />
 		
