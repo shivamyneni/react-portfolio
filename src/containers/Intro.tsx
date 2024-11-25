@@ -77,7 +77,7 @@ const Intro = memo(
 
 		return (
 			<div
-				className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection overflow-auto  scrollbar-hide "
+				className="w-screen flex flex-col h-auto justify-center items-center card IntroMainDiv IntroSection overflow-auto  scrollbar-hide border-primary border-[0.2rem] rounded-b-[0.8rem]  "
 				ref={ref as React.RefObject<HTMLDivElement>}>
 				<div className="w-screen xs:h-auto sm:h-auto  md:min-h-screen pt-[8rem]  flex flex-col justify-end items-center gradient-background">
 					<div className="w-3/4 flex flex-col justify-center items-center ">
@@ -109,7 +109,7 @@ const Intro = memo(
 						Scroll to View Content
 					</p>
 				</div>
-				<div className="w-screen min-h-screen h-[fit] px-[1rem] pb-[2rem] flex xs:flex-col flex-row items-center bg-[#eec90e] bg-opacity-30 ">
+				<div className="w-screen min-h-screen h-[fit] px-[1rem] pb-[2rem] flex xs:flex-col flex-row items-center bg-[#eec90e] bg-opacity-30 border-primary border-0 border-t-[0.2rem]  ">
 					<img
 						src={IntroImage}
 						className="w-[50%] md:hidden mt-[3rem]  object-cover rounded-[2rem]"
@@ -122,7 +122,7 @@ const Intro = memo(
 								</p>
 								<div className="h-[3px] w-full bg-primary" />
 							</div>
-							<p className="font-Poppins  xs:w-full md:w-3/4 mt-[1rem]  xs:text-[1.2rem] sm:text-[1.2rem] md:text-[1.2rem] text-left text-primary">
+							<p className="font-Poppins  xs:w-full md:w-3/4 mt-[1rem]  xs:text-[1rem] sm:text-[1rem] md:text-[1.2rem] text-left text-primary">
 								Hi, I’m Naga Siva Sai Myneni, a software engineer with a passion
 								for creating efficient and user-focused applications. I
 								specialize in front-end development, blending creativity and
@@ -139,7 +139,6 @@ const Intro = memo(
 						className="w-[30%] h-[60%] xs:hidden     object-cover rounded-[2rem]"
 					/>
 				</div>
-				
 			</div>
 		);
 	})
