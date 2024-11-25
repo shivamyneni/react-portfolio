@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Logo from "assets/Images/Logo";
+import IntroImage from "assets/Images/IntroImage.jpg";
 
 import { Mouse, MoveDownRight } from "lucide-react";
 import MouseIcon from "icons/MouseIcon";
@@ -108,20 +109,49 @@ const Intro = memo(
 						Scroll to View Content
 					</p>
 				</div>
-				<div className="w-screen bg-opacity-10 px-[15%] xs:h-auto sm:h-auto  md:h-screen   mb-[20px]  xs:py-[10%] sm:py-[10%] md:py-[2%] flex flex-col justify-center items-start bg-primary overflow-hidden  border-[4px] border-primary rounded-b-[2%] mx-[2px]">
-					<div className=" group flex flex-row justify-center items-center mb-[40px] ml-[-30px] items-self-start xs:mt-[32px] sm:mt-[32px] md:mt-[10px]">
+				<div className="w-screen h-[90vh] px-[1rem] flex xs:flex-col flex-row items-center bg-[#eec90e] bg-opacity-30 ">
+					<img
+						src={IntroImage}
+						className="w-[60%] md:hidden mt-[3rem]     object-cover rounded-[2rem]"
+					/>
+					<div className="md:w-[60%] h-full flex  xs:justify-start md:justify-end items-center">
+						<div className="h-fit md:w-[90%] flex flex-col items-end  justify-start pr-[2rem]">
+							<div className="w-full xs:w-full md:w-3/4 flex flex-col justify-start items-start">
+								<p className="font-Acorn text-primary  font-bold  xs:text-[3rem] sm:text-[4rem] md:text-[4rem] uppercase">
+									About
+								</p>
+								<div className="h-[3px] w-full bg-primary" />
+							</div>
+							<p className="font-Poppins  xs:w-full md:w-3/4 mt-[1rem]  xs:text-[1.2rem] sm:text-[1.2rem] md:text-[1.2rem] text-left text-primary">
+								Hi, I’m Naga Siva Sai Myneni, a software engineer with a passion
+								for creating efficient and user-focused applications. I
+								specialize in front-end development, blending creativity and
+								technical expertise to craft seamless digital experiences. With
+								a strong foundation in tools like React, Node.js, and Tailwind
+								CSS, I love exploring new technologies and finding innovative
+								ways to solve problems.
+							</p>
+						</div>
+					</div>
+
+					<img
+						src={IntroImage}
+						className="w-[30%] h-[60%] xs:hidden     object-cover rounded-[2rem]"
+					/>
+				</div>
+				{/* <div className=" group flex flex-row justify-center items-center mb-[40px] ml-[-30px] items-self-start xs:mt-[32px] sm:mt-[32px] md:mt-[10px]">
 						<p className="font-Acorn  md:text-[32px] font-bold text-primary  duration-300">
 							About
 						</p>
 						<MoveDownRight className="ml-[8px] w-8 h-8 text-primary transition-transform transform  group-hover:translate-y-[5px] group-hover:translate-x-[5px] duration-300" />
 					</div>
+
 					<div className="text-reveal">
 						<span className="font-Acorn font-bold xs:text-[24px] sm:text-[32px] md:text-[64px] text-center text-primary capitalize quote1 block reveal-text">
 							Hi! I am a full stack developer currently seeking full-time work
 							with a great company!
 						</span>
-					</div>
-				</div>
+					</div> */}
 			</div>
 		);
 	})
