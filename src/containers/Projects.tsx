@@ -3,7 +3,7 @@ import { TiArrowRight } from "react-icons/ti";
 const Projects = () => {
 	const projects = ["React ReuseAnalyzer", "Shopease"];
 	return (
-		<div className="w-screen xs:h-[70vh] md:h-screen   flex items-end  pt-[50px]  scrollbar-hide border-0 border-t-[4px] border-black">
+		<div className="w-screen xs:h-[70vh] md:h-screen   flex items-end  pt-[50px]  scrollbar-hide ">
 			<div className="flex h-[90%] px-[1.2rem]  flex-col  xs:w-full md:w-1/2  md:items-end">
 				<div className="flex h-auto flex-row justify-between  xs:w-full md:w-3/4 items-center ">
 					<p className="font-Acorn text-primary mt-[20px] font-bold  xs:text-[3rem] sm:text-[4rem] md:text-[4rem] uppercase">
