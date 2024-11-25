@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Master
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
             - name: Install dependencies
               run: npm install
             - name: Build
@@ -17,7 +17,7 @@ jobs:
                 CI: false
               run: npm run build
             - name: Upload Bild Files
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v4
               with:
                 name: build
                 path: build
@@ -27,9 +27,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout master
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
             - name : Download build files
-              uses: actions/download-artifact@v2
+              uses: actions/download-artifact@v4
               with:
                 name: build
                 path: build
