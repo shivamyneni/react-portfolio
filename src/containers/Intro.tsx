@@ -109,10 +109,10 @@ const Intro = memo(
 						Scroll to View Content
 					</p>
 				</div>
-				<div className="w-screen h-[90vh] px-[1rem] flex xs:flex-col flex-row items-center bg-[#eec90e] bg-opacity-30 ">
+				<div className="w-screen min-h-screen h-[fit] px-[1rem] pb-[2rem] flex xs:flex-col flex-row items-center bg-[#eec90e] bg-opacity-30 ">
 					<img
 						src={IntroImage}
-						className="w-[60%] md:hidden mt-[3rem]     object-cover rounded-[2rem]"
+						className="w-[50%] md:hidden mt-[3rem]  object-cover rounded-[2rem]"
 					/>
 					<div className="md:w-[60%] h-full flex  xs:justify-start md:justify-end items-center">
 						<div className="h-fit md:w-[90%] flex flex-col items-end  justify-start pr-[2rem]">
@@ -139,19 +139,7 @@ const Intro = memo(
 						className="w-[30%] h-[60%] xs:hidden     object-cover rounded-[2rem]"
 					/>
 				</div>
-				{/* <div className=" group flex flex-row justify-center items-center mb-[40px] ml-[-30px] items-self-start xs:mt-[32px] sm:mt-[32px] md:mt-[10px]">
-						<p className="font-Acorn  md:text-[32px] font-bold text-primary  duration-300">
-							About
-						</p>
-						<MoveDownRight className="ml-[8px] w-8 h-8 text-primary transition-transform transform  group-hover:translate-y-[5px] group-hover:translate-x-[5px] duration-300" />
-					</div>
-
-					<div className="text-reveal">
-						<span className="font-Acorn font-bold xs:text-[24px] sm:text-[32px] md:text-[64px] text-center text-primary capitalize quote1 block reveal-text">
-							Hi! I am a full stack developer currently seeking full-time work
-							with a great company!
-						</span>
-					</div> */}
+				
 			</div>
 		);
 	})
