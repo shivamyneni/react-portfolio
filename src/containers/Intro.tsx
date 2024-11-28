@@ -133,11 +133,16 @@ const Intro = memo(
 							</p>
 						</div>
 					</div>
-
-					<img
-						src={IntroImage}
-						className="w-[30%] h-[60%] xs:hidden     object-cover rounded-[2rem]"
-					/>
+					<div className="w-[30%] h-[60%] xs:hidden group  relative  object-cover rounded-[2rem]">
+						<div
+							className="absolute w-full h-full border-[0.3rem] border-primary rounded-[2rem] z-10 transition-transform duration-300 group-hover:translate-x-[2.5rem] group-hover:translate-y-[-2.5rem]"
+							style={{
+								backgroundImage: `repeating-linear-gradient(120deg, transparent 0%, transparent 5%, #025a4e 5%, #025a4e 6%)`,
+							}}></div>
+						<img
+							className="w-full h-full relative rounded-[2rem] z-20 transition-transform duration-300 group-hover:scale-105 "
+							src={IntroImage}></img>
+					</div>
 				</div>
 			</div>
 		);
