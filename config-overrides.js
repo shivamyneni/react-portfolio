@@ -7,6 +7,7 @@ module.exports = function override(config) {
     "@containers": "src/containers",
     "@images": "src/assets/Images",
     "@styles": "src/styles",
+    "@models":"src/assets/Models"
     // Add more aliases as needed
   })(config);
 
