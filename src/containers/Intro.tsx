@@ -122,7 +122,7 @@ const Intro = memo(
 								</p>
 								<div className="h-[3px] w-full bg-primary" />
 							</div>
-							<p className="font-Poppins  xs:w-full md:w-3/4 mt-[1rem]  xs:text-[1rem] sm:text-[1rem] md:text-[1.2rem] text-left text-primary">
+							<p className="font-Poppins  xs:w-full md:w-3/4 mt-[1rem]  xs:text-[1rem] sm:text-[1rem] md:text-[1.2rem] text-justify text-primary">
 								Hi, I’m Naga Siva Sai Myneni, a software engineer with a passion
 								for creating efficient and user-focused applications. I
 								specialize in front-end development, blending creativity and
